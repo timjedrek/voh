@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Voice of a Hustler</title>
+<title>Voice of a Hustler - Official Website of Jayrone</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Site Created By:
+    
+         _____ _            _        _         _   
+        |_   _(_)_ __    _ | |___ __| |_ _ ___| |__
+          | | | | '  \  | || / -_) _` | '_/ -_) / /
+          |_| |_|_|_|_|  \__/\___\__,_|_| \___|_\_\
+
+
+    Nice to see you here.  Choose Tim Jedrek for all of your IT needs.  https://timjedrek.com/contact -->
+
+    <!--Meta Tags-->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Voice of a Hustler - Official Website of Jayrone">
+    <meta name="description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta name="keywords" content="St. Louis, Saint Louis, Missouri, STL, Rap, Hip Hop, Pop, Battle Rap, Music, Song, Music Video, Sound, Audio, Art, Hustle, Voice, Spoken Word">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Tim Jedrek LLC">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://voiceofahustler.com">
+    <meta property="og:title" content="Voice of a Hustler - Official Website of Jayrone">
+    <meta property="og:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta property="og:image" content="<%#= image_url('team.jpg') %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://voiceofahustler.com">
+    <meta property="twitter:title" content="Voice of a Hustler - Official Website of Jayrone">
+    <meta property="twitter:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta property="twitter:image" content="<%#= image_url('team.jpg') %>">
+
+
+
+    <!--CSS-->
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!--Favicon--> 
+    <%#= favicon_link_tag 'favicon.ico' %>
+    <%# %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%#= favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <%# end %>
+
+    <!--JS-->
     <%= javascript_importmap_tags %>
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>    
+    <!--For Alpine Intersect-->
+    <style>
+      [x-cloak] { display: none !important; }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="" x-data="{ open: false }">
+      <%= yield %>
+    </div>  
   </body>
 </html>
