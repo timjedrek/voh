@@ -1,7 +1,9 @@
 <nav class="w-full bg-neutral-900 text-neutral-400 fixed z-50">
   <div class="flex flex-row items-center justify-between">
-    <%= image_tag "logo.png", class: "h-20 pl-5 py-3 lg:hidden" %>
-    <%= image_tag "logolong.png", class: "h-20 pl-5 py-3 hidden lg:block" %>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", class: "h-20 pl-5 py-3 lg:hidden" %>
+      <%= image_tag "logolong.png", class: "h-20 pl-5 py-3 hidden lg:block" %>
+    <% end %>
     <!--Hamburger Menu Button-->
     <div class="lg:hidden text-4xl p-5" x-on:click="open = ! open">
       ☰
@@ -9,7 +11,7 @@
     <!--desktop links-->
     <div class="lg:block hidden ">
       <div class="flex flex-row gap-3 xl:gap-7 mx-5 text-center">
-        <%=link_to "Music Videos", root_path, class: "hover:text-neutral-700"%>
+        <%=link_to "Music Videos", videos_path, class: "hover:text-neutral-700"%>
         <%=link_to "Music", root_path, class: "hover:text-neutral-700"%>
         <%=link_to "Battle Rap", root_path, class: "hover:text-neutral-700"%>
         <%=link_to "Tour Dates", root_path, class: "hover:text-neutral-700"%>
@@ -23,7 +25,7 @@
   <!--mobile menu-->
   <div class="lg:hidden">
     <div class="flex flex-col gap-5 h-screen text-center justify-center -mt-20" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
-      <%=link_to "Music Videos", root_path, class: "hover:text-neutral-700"%>
+      <%=link_to "Music Videos", videos_path, class: "hover:text-neutral-700"%>
       <%=link_to "Music", root_path, class: "hover:text-neutral-700"%>
       <%=link_to "Battle Rap", root_path, class: "hover:text-neutral-700"%>
       <%=link_to "Tour Dates", root_path, class: "hover:text-neutral-700"%>
