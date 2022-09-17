@@ -45,6 +45,12 @@
     <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+    <!--Google Font Splash-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Splash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
 
     <!--Favicon--> 
     <%#= favicon_link_tag 'favicon.ico' %>
@@ -63,11 +69,11 @@
     <style>
       [x-cloak] { display: none !important; }
     </style>
+
   </head>
 
   <body>
-    <div class="" x-data="{ open: false }">
-      <%= yield %>
-    </div>  
+    <!--YIELD-->
+    <%= yield %>  
   </body>
 </html>
