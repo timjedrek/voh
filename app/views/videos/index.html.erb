@@ -13,12 +13,24 @@
   </div>
 
   <!--Link only for when admin signed in-->
-  <div class="w-full text-center">
-    <%= link_to 'New video', new_video_path, class: "rounded-lg px-5 font-medium hover:text-gray-700" %>
+  <div class="w-full text-center bg-neutral-400 rounded-lg px-5 font-medium  hover:bg-neutral-700">
+    <%= link_to 'New video', new_video_path, class: "" %>
   </div>
-  <div id="videos" class="min-w-full">
-    <%= render @videos %>
-  </div>
+
+  <% @videos.reverse_each do | video | %>
+    <%= link_to "https://youtu.be/#{video.code}", target: :_blank do%>
+    <div class="px-5">
+      <%= image_tag "https://img.youtube.com/vi/#{video.code}/0.jpg" %>
+      <%= video.title %>
+    </div>
+    <br>
+    <% end %>
+  <% end %>
+
+  <!--Previous feed, commented and kept for reference later?-->
+  <!--<div id="videos" class="min-w-full">
+    <%#= render @videos %>
+  </div>-->
 </main>
 
 <%= render "shared/footer"%>
