@@ -13,24 +13,28 @@
   </div>
 
   <!--Link only for when admin signed in-->
-  <div class="w-full text-center bg-neutral-400 rounded-lg px-5 font-medium  hover:bg-neutral-700">
-    <%= link_to 'New video', new_video_path, class: "" %>
+  <div class="w-full mb-10 flex flex-row justify-center">
+    <%= link_to 'New video', new_video_path, class: "text-center bg-green-300 text-green-600 rounded-lg px-5 py-3 font-medium  hover:bg-green-400" %>
   </div>
 
   <% @videos.reverse_each do | video | %>
-    <%= link_to "https://youtu.be/#{video.code}", target: :_blank do%>
-    <div class="px-5">
-      <%= image_tag "https://img.youtube.com/vi/#{video.code}/0.jpg" %>
-      <%= video.title %>
-    </div>
-    <br>
-    <% end %>
+
+    <!--Mobile Views-->
+    <div class="flex flex-col items-center my-5 lg:hidden">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/<%=video.code%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <%= video.title%>
+    </div>   
+
+    <!--desktop Views-->
+    <div class="lg:flex lg:flex-col lg:items-center lg:my-5 hidden">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=video.code%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <%= video.title%>
+    </div>  
+
   <% end %>
 
-  <!--Previous feed, commented and kept for reference later?-->
-  <!--<div id="videos" class="min-w-full">
-    <%#= render @videos %>
-  </div>-->
+<!--Spacing-->
+<div class="h-20"></div>
 </main>
 
 <%= render "shared/footer"%>
