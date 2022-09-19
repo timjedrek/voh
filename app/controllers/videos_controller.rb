@@ -1,13 +1,16 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
 
-  def music_video
+  def music_videos
+    @videos = Video.music_videos
   end
 
   def battle_rap
+    @videos = Video.battle_rap
   end
   
   def artists_to_watch
+    @videos = Video.artists_to_watch
   end
 
   # GET /videos or /videos.json
