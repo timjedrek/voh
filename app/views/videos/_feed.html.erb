@@ -1,4 +1,32 @@
-<% @videos.reverse_each do | video | %>
+<%= render "shared/navbar" %>
+<!--Spacer-->
+<div class="h-20"></div>
+
+<!--Main Content-->
+<main class="bg-black text-neutral-400">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <!--HEADER-->
+  <div class="py-10 font-bold font-splash text-center">
+    <% if current_page?(music_videos_path) %>
+      <h1 class="text-6xl">music videos</h1>
+    <% end %>
+    <% if current_page?(battle_rap_path) %>
+      <h1 class="text-6xl">battle_rap</h1>
+    <% end %>
+    <% if current_page?(artists_to_watch_path) %>
+      <h1 class="text-6xl">artists to watch</h1>
+    <% end %>
+  </div>
+
+  <!--Link only for when admin signed in-->
+  <div class="w-full mb-10 flex flex-row justify-center">
+    <%= link_to 'New video', new_video_path, class: "text-center bg-green-300 text-green-600 rounded-lg px-5 py-3 font-medium  hover:bg-green-400" %>
+  </div>
+
+  <% @videos.reverse_each do | video | %>
 
     <!--Mobile Views-->
     <div class="flex flex-col items-center my-5 lg:hidden">
@@ -23,3 +51,9 @@
     </div>  
 
   <% end %>
+
+<!--Spacing-->
+<div class="h-20"></div>
+</main>
+
+<%= render "shared/footer"%>
