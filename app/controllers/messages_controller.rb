@@ -1,6 +1,10 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
 
+
+  def confirmation
+  end
+  
   # GET /messages or /messages.json
   def index
     @messages = Message.all

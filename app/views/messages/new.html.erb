@@ -1,7 +1,11 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New message</h1>
+<%= render "shared/navbar" %>
+<!--Spacer lol-->
+<div class="h-20"></div>
 
+
+<main class="bg-black text-neutral-400 min-h-screen flex flex-col items-center">
+  <h1 class="font-bold text-2xl text-center px-5 pt-10">Contact the Voice of the Hustler</h1>
+  <h3 class="text-sm text-center px-5 pt-3 italic lg:w-1/2"> some text goes here and then an email: <%= mail_to 'contact@voiceofahustler.com', class: "text-lime-800 hover:underline"%></h3>
   <%= render "form", message: @message %>
-
-  <%= link_to 'Back to messages', messages_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-</div>
+</main>
+<%= render "shared/footer"%>

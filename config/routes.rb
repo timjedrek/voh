@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get 'messages/confirmation', to: 'messages#confirmation'
+  
   resources :messages
   resources :videos
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

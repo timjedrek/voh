@@ -1,0 +1,47 @@
+<%= render "shared/navbar" %>
+<!--Spacer lol-->
+<div class="h-28"></div>
+<main class="bg-neutral-50 w-full flex flex-col items-center justify-center">
+  <!--Container for contents-->
+  <div class="text-center lg:w-3/5 md:w-4/5">
+    
+    <h1 class="font-bold text-4xl py-10">Your message has been sent!</h1>
+    
+    <!--Container for check-->
+    <div class="flex flex-row justify-center">
+      <!--circle of check-->
+      <div class="bg-green-300 rounded-full py-3 px-4 mb-10">
+        <!--check itself-->
+        <div class="text-green-500 text-5xl">✓</div>
+      </div>
+    </div>
+    
+    
+    <%#-- The message (lol, i used a "notice" to bring the message data to this page hahahaha) --%>
+    <% if notice.present?%>
+    <p class="font-semibold">Your Message:</p>
+    <div class="mb-5 px-5 italic text-gray-500 text-sm">
+      <%= notice %>
+      </div>
+    <% end %>
+  
+    
+    <p class="px-5">
+    Thank you for contacting Voice of a Hustler.  We will review your message and then get back with you soon.  <br><br>
+    You can also email us at <%= mail_to 'contact@voiceofahustler.com', class: "text-blue-800 hover:underline"%>
+    </p>
+
+    <div class="pt-10 flex flex-row justify-center">
+    <%= link_to root_path do %>
+      <div class="rounded-lg bg-neutral-200 hover:bg-neutral-300 text-neutral-900 py-3 px-32 mb-10">
+        Home
+      </div>
+    <% end %>
+    </div>
+    
+
+    <%#= link_to 'Back to messages', messages_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</main>
+
+<%= render "shared/footer"%>
