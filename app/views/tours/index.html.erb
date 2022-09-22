@@ -5,11 +5,17 @@
     <h1 class="text-6xl">Upcoming Tours</h1>
   </div>
 
+  <% @tours.upcoming.order(:date).reverse_each do | tour | %>
+    <div class="">
+      <%= tour.date %>: <%= tour.city %>
+    </div>
+  <% end %>
+
   <div class="py-10 font-bold font-splash text-center">
     <h1 class="text-6xl">Previous Tours</h1>
   </div>
 
-TOURS HELLOW WORLDD
+
 </main>
 
 <%= render "shared/footer"%>
