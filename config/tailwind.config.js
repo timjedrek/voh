@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        splash: ['"Splash"', 'cursive', 'Helvetica', 'Arial', 'sans-serif'],
+        splash: ['"Splash"', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
