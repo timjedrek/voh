@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'messages#new'
   get 'contact/confirmation', to: 'messages#confirmation'
 
+  # PAGE ROUTES
+  get 'game-corner', to: 'pages#game_corner' 
+  get 'merchandise', to: 'pages#merchandise' 
+
   root "pages#home"
 end
