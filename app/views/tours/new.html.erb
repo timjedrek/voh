@@ -1,7 +1,15 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New tour</h1>
-
-  <%= render "form", tour: @tour %>
-
-  <%= link_to 'Back to tours', tours_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-</div>
+<%= render "shared/navbar"%>
+<main class="bg-neutral-800 text-gray-300">
+  <!--Spacer-->
+  <div class="h-20">
+  </div>
+  <!--Form-->
+  <div class="px-10 mx-auto lg:w-2/3 w-full mt-10">
+    <h1 class="font-bold text-6xl font-splash text-neutral-400 text-center">Add a Tour</h1>
+    <%= render "form", tour: @tour %>
+  </div>
+  <!--Spacer-->
+  <div class="h-20">
+  </div>
+</main>
+<%= render "shared/footer"%>
