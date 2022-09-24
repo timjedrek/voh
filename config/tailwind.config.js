@@ -13,6 +13,9 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         splash: ['"Splash"', 'Helvetica', 'Arial', 'sans-serif'],
       },
+      backgroundImage : {
+        'gamecorner' : "url('jayrone-game-header.png')",
+      }
     },
   },
   plugins: [
