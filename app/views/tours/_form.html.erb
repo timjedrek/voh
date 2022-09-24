@@ -13,15 +13,15 @@
 
   <div class="my-5">
     <%= form.label :date %>
-    <%= form.date_field :date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.date_field :date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 w-full text-black focus:border-neutral-600 focus:ring-neutral-600 placeholder:text-sm" %>
   </div>
 
   <div class="my-5">
     <%= form.label :city %>
-    <%= form.text_field :city, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :city, class: "block shadow rounded-md border border-gray-200 outline-none px-3 w-full text-black focus:border-neutral-600 focus:ring-neutral-600 placeholder:text-sm" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "rounded-lg w-full py-3 px-5 bg-neutral-200 hover:bg-neutral-300 text-neutral-900 inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
