@@ -6,11 +6,68 @@
       <%= image_tag "godv.png" %>
     </div>
   </header>
-  <section class="px-5">
-    <h3 class="text-center text-3xl italic py-10">Guns Oracles Drugs V</h3>
-    <p class="pb-10">
-      Guns Oracles Drugs V is an full length studio album created by JayRone <span class="text-blue-400 hover:underline">@voiceofahustler</span> that brings to life music. Merchandise is available for this studio album also featuring an exclusive sneaker design available for purchase!
-    </p>
+  <section class="px-5 flex flex-col items-center">
+    <div class="lg:w-3/5">
+      <h3 class="text-center text-3xl italic py-10">Guns Oracles Drugs V</h3>
+      <p class="pb-10">
+        Guns Oracles Drugs V is an full length studio album created by JayRone <span class="text-blue-400 hover:underline">@voiceofahustler</span> that brings to life music. Merchandise is available for this studio album also featuring an exclusive sneaker design available for purchase!
+      </p>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <%= link_to 'Click here to go to the store', "https://teespring.com/godvmerchandise?pid=633", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 text-gray-800 hover:bg-gray-300 inline-block font-medium text-sm" %>
+  </section>
+
+  <!--Desktop Gallery-->
+  <section class="overflow-hidden hidden lg:block">
+    <div class="container px-5 py-2 mx-auto lg:py-10 lg:px-32">
+      <div class="flex flex-wrap -m-1 md:-m-2">
+        <div class="flex flex-wrap w-1/2">
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "merch3.jpg", class: "block object-cover object-left w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "merch2.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-full p-1 md:p-2">
+            <%= image_tag "merch1.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="w-full p-1 md:p-2">
+            <%= image_tag "merch5.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "merch4.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "merch6.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Mobile images-->
+  <section class="">
+    <div class="flex flex-col px-5 py-5 lg:hidden">
+      <%= image_tag "merch1.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "merch2.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "merch3.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "merch4.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "merch5.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "merch6.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+    </div>
+  </section>
+    <div class="text-center">
+      <%= link_to 'Click here to get the shoes', "https://www.aliveshoes.com/godv", class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 text-gray-800 hover:bg-gray-300 inline-block font-medium text-sm" %>
+    </div>
+    <div class="flex flex-col px-5 py-5">
+      <%= image_tag "shoe2.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "shoe1.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+    </div>
+  <section>
+  
   </section>
 
   
