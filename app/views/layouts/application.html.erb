@@ -72,6 +72,12 @@
   </head>
 
   <body class="bg-neutral-900">
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
     <!--YIELD-->
     <%= yield %>  
   </body>
