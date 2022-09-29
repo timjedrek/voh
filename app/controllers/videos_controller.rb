@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, except: [:music_videos, :battle_rap, :artists_to_watch]
 
   def music_videos
     @videos = Video.music_videos
