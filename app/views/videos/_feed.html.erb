@@ -24,7 +24,7 @@
    <div class="flex flex-col lg:grid lg:grid-cols-4 gap-3 lg:mx-10">
     <% @videos.reverse_each do | video | %>
       <div class="flex flex-col">
-        <%= link_to video, class: "hover:brightness-150 hover:scale-110 transition" do %>
+        <%= link_to video, class: "hover:brightness-150 lg:hover:scale-110 transition" do %>
           <%= image_tag "https://img.youtube.com/vi/#{video.code}/0.jpg", class: "w-full" %>
           <div class="font-semibold text-sm text-center bg-black pb-3"><%=video.title%></div>
         <% end %>
