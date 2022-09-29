@@ -1,8 +1,33 @@
-<div id="<%= dom_id video %>">
-  <%= video.title %>
-  <%= video.code %>
-  <% if action_name != "show" %>
-    <%= link_to "Show this video", video, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this video', edit_video_path(video), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-  <% end %>
+<div id="<%= dom_id video %>" class="text-gray-300">
+
+<!--Mobile Views-->
+    <div class="flex flex-col items-center my-5 lg:hidden">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/<%=video.code%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="text-center">
+        <%= video.title%><br>
+        Category: <%= video.category%><br>
+      </div>
+
+      <% if admin_signed_in? %>
+      <div class="flex flex-row items-center gap-3">
+        <%= button_to 'Destroy this video', video_path(video), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-400 font-medium text-red-800 text-sm hover:bg-red-600" %>
+        <%= link_to 'Edit this video', edit_video_path(video), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium text-sm" %>
+      </div>
+      <%end%>
+    </div>   
+
+    <!--desktop Views-->
+    <div class="lg:flex lg:flex-col lg:items-center lg:my-5 hidden">
+      <iframe width="1000" height="562" src="https://www.youtube.com/embed/<%=video.code%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="text-center">
+        <%= video.title%><br>
+        Category: <%= video.category%><br>
+      </div>
+      <% if admin_signed_in? %>
+      <div class="flex flex-row items-center gap-3">
+        <%= button_to 'Destroy this video', video_path(video), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-400 font-medium text-red-800 hover:bg-red-600" %>
+        <%= link_to 'Edit this video', edit_video_path(video), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      </div>
+      <%end%>
+    </div>  
 </div>
