@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @feature = Feature.all
+    @video = Video.music_videos.last
   end
 
   def game_corner
