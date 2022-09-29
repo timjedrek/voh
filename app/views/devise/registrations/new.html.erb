@@ -1,7 +1,11 @@
-<main class="bg-zinc-50 w-full flex flex-col items-center justify-center pb-10">
+<%= render "shared/navbar" %>
+<!--Spacer-->
+<div class="h-20"></div>
+
+<main class="bg-neutral-800  w-full flex flex-col items-center justify-center pb-10">
   <!--Container for contents-->
   <div class="lg:w-3/5 md:w-4/5">
-    <h1 class="font-bold text-4xl text-center py-10">Sign up</h1>
+    <h1 class="font-bold text-4xl text-center py-10 text-gray-300">Sign up</h1>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
       <%# FOR ERRORS %>
       <div class="px-10">
@@ -18,25 +22,27 @@
       <div class="px-10 pb-10">
 
         <div class="my-5">
-          <%= form.label :Email %>
-          <%= form.email_field :email, placeholder: "Email", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-lime-800 focus:ring-lime-800" %>
+          <%= form.label :Email, class: "text-gray-300" %>
+          <%= form.email_field :email, placeholder: "Email", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-neutral-800 focus:ring-neutral-800" %>
         </div>
 
         <div class="my-5">
-          <%= form.label "Password" %>
-          <%= form.password_field :password, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-lime-800 focus:ring-lime-800" %>
+          <%= form.label "Password", class: "text-gray-300" %>
+          <%= form.password_field :password, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-neutral-800 focus:ring-neutral-800" %>
         </div>
 
         <div class="my-5">
-          <%= form.label "Confirm Password" %>
-          <%= form.password_field :password_confirmation, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-lime-800 focus:ring-lime-800" %>
+          <%= form.label "Confirm Password", class: "text-gray-300" %>
+          <%= form.password_field :password_confirmation, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-neutral-800 focus:ring-neutral-800" %>
         </div>
 
         <div class="inline">
-          <%= form.submit "Sign Up", class: "rounded-lg py-3 px-5 w-full bg-lime-800 text-white inline-block font-medium cursor-pointer hover:bg-lime-700 active:bg-lime-600" %>
+          <%= form.submit "Sign Up", class: "rounded-lg py-3 px-5 w-full bg-neutral-600 text-white inline-block font-medium cursor-pointer hover:bg-neutral-700 active:bg-neutral-600" %>
         </div>
       </div>
     <% end %>
 
   </div>
 </main>
+
+<%= render "shared/footer"%>
