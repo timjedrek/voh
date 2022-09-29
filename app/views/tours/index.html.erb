@@ -16,8 +16,12 @@
         <div class="hidden lg:block">
           <%= tour.date.strftime("%B %-d, %Y") %>
         </div>
-        <div class="">
-          <%= tour.city %>
+        <div class="flex flex-row gap-3">
+          <%= tour.city %> 
+          <% if admin_signed_in? %>
+            <%=link_to "✎", edit_tour_path(tour), class: "text-yellow-500" %> 
+            <%=button_to "X", tour_path(tour), method: :delete, class: "text-red-500" %>
+          <%end%>
         </div>
       <% end %>
     </div>
@@ -36,8 +40,12 @@
         <div class="hidden lg:block">
           <%= tour.date.strftime("%B %-d, %Y") %>
         </div>
-        <div class="">
-          <%= tour.city %>
+        <div class="flex flex-row gap-3 justify-start">
+          <%= tour.city %> 
+          <% if admin_signed_in? %>
+            <%=link_to "✎", edit_tour_path(tour), class: "text-yellow-500" %> 
+            <%=button_to "X", tour_path(tour), method: :delete, class: "text-red-500" %>
+          <%end%>
         </div>
       <% end %>
     </div>
