@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="title" content="Voice of a Hustler - Official Website of Jayrone">
-    <meta name="description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta name="description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over millions of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
     <meta name="keywords" content="St. Louis, Saint Louis, Missouri, STL, Rap, Hip Hop, Pop, Battle Rap, Music, Song, Music Video, Sound, Audio, Art, Hustle, Voice, Spoken Word">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -30,15 +30,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://voiceofahustler.com">
     <meta property="og:title" content="Voice of a Hustler - Official Website of Jayrone">
-    <meta property="og:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
-    <meta property="og:image" content="<%#= image_url('team.jpg') %>">
+    <meta property="og:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over millions of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta property="og:image" content="<%= image_url('jayrone1.jpg') %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://voiceofahustler.com">
     <meta property="twitter:title" content="Voice of a Hustler - Official Website of Jayrone">
-    <meta property="twitter:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over hundreds of thousands of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
-    <meta property="twitter:image" content="<%#= image_url('team.jpg') %>">
+    <meta property="twitter:description" content="Jayrone is... The Voice of a Hustler. Changing lives through music and art.  Originating from the 'Lou, now with over millions of views, followers, and fans, Jayrone speaks the truth through his music.  Listen now on iTunes, Spotify, and SoundCloud.  Watch him on Youtube and become a fan.">
+    <meta property="twitter:image" content="<%= image_url('jayrone1.jpg') %>">
 
 
 
@@ -52,10 +52,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Splash&display=swap" rel="stylesheet">
 
     <!--Favicon--> 
-    <%#= favicon_link_tag 'favicon.ico' %>
-    <%# %w(57 72 76 114 120 144 152 180).each do |size| %>
-      <%#= favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
-    <%# end %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <% %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%= favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
 
     <!--JS-->
     <%= javascript_importmap_tags %>
