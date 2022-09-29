@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     # Redirests signing out users back to sign-in
     get "admins", to: "devise/sessions#new"
   end
-  devise_for :admins
+  
+  ## sessions controller for when recaptcha is installed
+  #devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
+  devise_for :admins, controllers: { registrations: "registrations"}
   resources :features
   resources :tours
   
