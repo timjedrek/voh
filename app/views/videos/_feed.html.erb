@@ -24,11 +24,6 @@
     <% end %>
   </div>
 
-  <!--Link only for when admin signed in-->
-  <div class="w-full mb-10 flex flex-row justify-center">
-    <%= link_to 'New video', new_video_path, class: "text-center bg-green-300 text-green-600 rounded-lg px-5 py-3 font-medium  hover:bg-green-400" %>
-  </div>
-
   <% @videos.reverse_each do | video | %>
 
     <!--Mobile Views-->
