@@ -8,13 +8,8 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="py-10 font-bold font-splash text-center">
-    <h1 class="text-6xl">all features</h1>
-  </div>
-
-  <!--Link only for when admin signed in-->
-  <div class="w-full mb-10 flex flex-row justify-center">
-    <%= link_to 'New feature', new_feature_path, class: "text-center bg-green-300 text-green-600 rounded-lg px-5 py-3 font-medium  hover:bg-green-400" %>
+  <div class="py-10 font-bold text-center">
+    <h1 class="text-5xl">Featured Video Edit Page</h1>
   </div>
 
   <% @features.reverse_each do | feature | %>
