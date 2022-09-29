@@ -26,7 +26,7 @@ class ToursController < ApplicationController
 
     respond_to do |format|
       if @tour.save
-        format.html { redirect_to tour_url(@tour), notice: "Tour was successfully created." }
+        format.html { redirect_to tours_path, notice: "Tour was successfully created." }
         format.json { render :show, status: :created, location: @tour }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class ToursController < ApplicationController
   def update
     respond_to do |format|
       if @tour.update(tour_params)
-        format.html { redirect_to tour_url(@tour), notice: "Tour was successfully updated." }
+        format.html { redirect_to tours_path, notice: "Tour was successfully updated." }
         format.json { render :show, status: :ok, location: @tour }
       else
         format.html { render :edit, status: :unprocessable_entity }
