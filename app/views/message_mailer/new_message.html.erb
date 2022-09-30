@@ -1,0 +1,31 @@
+<style>
+main {
+    font-family: arial
+}
+</style>
+<main class="">
+  <!--Container for contents-->
+  <div class="">
+    <h1 class="">Your message has been sent!</h1>
+    
+    
+    
+    <h4>Your Message:</h4>
+    <em>
+      <%= @message.content %>
+    </em>
+  
+    
+    <p class="">
+    Thank you, <%= @message.name %>, for contacting Voice of a Hustler.  We are looking forward to speaking with you soon.  We will review your message and get back with you as soon as possible.  <br><br>
+    You can also email us at <%= mail_to 'jayrone@voiceofahustler.com'%>
+    </p>
+
+    <%= link_to root_url do %>
+      <div class="">
+          Visit the Voice of a Hustler website
+      </div>
+    <% end %>
+  
+  </div>
+</main>
