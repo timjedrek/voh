@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails CMS for Voice of a Hustler to replace previous WordPress site
 
-Things you may want to cover:
+Project Start: September 12, 2022
+Deployed on: September 29, 2022
 
-* Ruby version
+visit: https:voiceofahustler.com
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
