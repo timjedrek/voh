@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     get "login", to: "devise/sessions#new"
   end
   
-  ## sessions controller for when recaptcha is installed
-  #devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
-  devise_for :admins, controllers: { registrations: "registrations"}
+  # registrations controller -> only one admin
+  # sessions controller -> recaptcha
+  devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
   resources :features
   resources :tours
   
