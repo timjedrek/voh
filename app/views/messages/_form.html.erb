@@ -29,7 +29,7 @@
         <%= form.text_area :content, rows: 4, placeholder: "Your message", class: "block shadow rounded-md border border-gray-200 outline-none px-3 w-full text-black focus:border-neutral-600 focus:ring-neutral-600 placeholder:text-sm" %>
       </div>
 
-      <%#= recaptcha_tags %><br>
+      <%= recaptcha_tags %><br>
 
       <div class="inline">
         <%= form.submit "Send it!", class: "rounded-lg w-full py-3 px-5 bg-neutral-200 hover:bg-neutral-300 text-neutral-900 inline-block font-medium cursor-pointer" %>

@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     respond_to do |format|
-      if @message.save
+      if @message.save && verify_recaptcha(model: @message)
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
       else
@@ -42,8 +42,10 @@ class MessagesController < ApplicationController
   def update
     respond_to do |format|
       if @message.update(message_params)
-        format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
-        format.json { render :show, status: :ok, location: @message }
+        #format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
+        #format.json { render :show, status: :ok, location: @message }
+        format.html { redirect_to contact_confirmation_path, notice: @message.content}
+        format.json { render :show, status: :created, location: @message }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @message.errors, status: :unprocessable_entity }
