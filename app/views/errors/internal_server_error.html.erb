@@ -1,0 +1,14 @@
+<%= render "shared/navbar" %>
+<main class="bg-black text-neutral-400">
+  <!--Header-->
+  <header class="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-r from-neutral-900 to-black">
+    <div class="relative z-30 p-5 text-2xl text-white flex flex-col items-center">
+      <p class="pb-5 font-splash text-7xl">500 error</p> 
+      <p>The server could not understand your request</p>
+      <%= link_to root_path do %>
+        <div class="text-center block p-3 px-6 mr-5 text-stone-900 bg-stone-200 rounded-lg hover:bg-stone-300 mt-5">click here to go home</div>
+      <%end%>
+    </div>
+  </header>
+</main>
+<%= render "shared/footer"%>
