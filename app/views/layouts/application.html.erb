@@ -71,6 +71,16 @@
 
   </head>
 
+  <!-- Google Analytics / Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZHK8ERCVX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TZHK8ERCVX');
+  </script>
+
   <body class="bg-neutral-900">
     <% if admin_signed_in? %>
       <!--USER MENU-->
