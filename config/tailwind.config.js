@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         splash: ['"Splash"', 'Helvetica', 'Arial', 'sans-serif'],
+        navfont: ['"Quicksand"', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage : {
         'gamecorner' : "url('jayrone-game-header.png')",

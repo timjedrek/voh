@@ -1,12 +1,17 @@
 <!--x-data and leave div open for sticky-->
 <div class="" x-data="{ open: false }">
+  <header class="sticky top-0 lg:hidden bg-neutral-300 text-gray-800 py-2">
+    <%= link_to contact_path do%>
+      <!--Mobile Heading-->
+      <h1 class="font-semibold text-center">Media Bookings and Inquiries Click Here</h1>
+    <% end %>  
+  </header>
   <!--Phone number and Header-->
-  <header class="sticky top-0 flex flex-row-reverse lg:flex-row items-center justify-between bg-neutral-800 text-gray-50 py-2">
+  <header class="sticky top-0 hidden lg:flex flex-row items-center justify-between bg-neutral-800 text-gray-50 py-2">
     <!--Desktop Headling-->
-    <h1 class="font-semibold pl-5 hidden lg:block">Battle Rap MC and Creative Artist from STL</h1>
+    <h1 class="font-bold text-2xl pl-5 hidden lg:block">Battle Rap MC and Creative Artist from STL</h1>
     <!--Mobile Heading-->
-    <h1 class="font-semibold lg:pl-5 lg:hidden text-center">Follow Jayrone</h1>
-    <div class="px-5 lg:pr-10 flex flex-row items-center gap-5 lg:gap-6">
+    <div class="px-5 lg:pr-5 flex flex-row items-center gap-5 lg:gap-6">
       <%= render "shared/social"%>
     </div>
   </header>
@@ -21,9 +26,31 @@
         ☰
       </div>
       <!--desktop links-->
-      <div class="lg:block hidden ">
-        <div class="flex flex-row gap-3 xl:gap-7 mx-5 text-center">
-          <%=link_to "Home", root_path, data: { turbo: false },  class: "hover:text-neutral-700"%>
+      <div class="lg:block hidden font-navfont uppercase">
+        <div class="flex flex-row gap-2 xl:gap-7 mx-5 text-center items-center text-lg font-bold">
+          <%=link_to "Home", root_path, data: { turbo: false },  class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "The Hustle", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "Merchandise", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <!--Button-->
+          <%=link_to "Connect", root_path, class: "font-sans bg-neutral-200 text-neutral-800 px-4 rounded-lg py-2"%>
+
+          <%#=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-700"%>
+          <%#=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-700"%>
+          <%#=link_to "Artists to Watch", artists_to_watch_path, class: "hover:text-neutral-700"%>
+          <%#=link_to "Game Corner", game_corner_path, class: "hover:text-neutral-700"%>
+          <%#=link_to "Merchandise", merchandise_path, class: "hover:text-neutral-700"%>
+        </div>
+      </div>
+    </div>
+
+    <!--mobile menu-->
+    <div class="lg:hidden">
+      <div class="flex flex-col h-screen text-center justify-center -mt-10" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
+        <div class="flex flex-col justify-center gap-5 text-xl ">
+          <%=link_to "Home", root_path, class: "hover:text-neutral-700"%>
           <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-700"%>
           <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-700"%>
           <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-700"%>
@@ -31,22 +58,14 @@
           <%=link_to "Game Corner", game_corner_path, class: "hover:text-neutral-700"%>
           <%=link_to "Merchandise", merchandise_path, class: "hover:text-neutral-700"%>
         </div>
+        <div class="px-5 w-full flex flex-row items-center justify-center gap-5 mt-20">
+          <%= render "shared/social"%>
+        </div>
       </div>
     </div>
-
-    <!--mobile menu-->
-    <div class="lg:hidden">
-      <div class="flex flex-col gap-5 h-screen text-center justify-center -mt-20" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
-        <%=link_to "Home", root_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Artists to Watch", artists_to_watch_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Game Corner", game_corner_path, class: "hover:text-neutral-700"%>
-        <%=link_to "Merchandise", merchandise_path, class: "hover:text-neutral-700"%>
-      </div>
-    </div>
+  
   </nav>
 <!--
 </div>
 -->  
+
