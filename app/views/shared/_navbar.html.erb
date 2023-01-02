@@ -1,8 +1,18 @@
-<!--Mobile menu x-data-->
+<!--x-data and leave div open for sticky-->
 <div class="" x-data="{ open: false }">
-  <nav class="w-full bg-neutral-900 text-neutral-400 fixed z-50">
+  <!--Phone number and Header-->
+  <header class="sticky top-0 flex flex-row-reverse lg:flex-row items-center justify-between bg-neutral-800 text-gray-50 py-2">
+    <!--Desktop Headling-->
+    <h1 class="font-semibold pl-5 hidden lg:block">Battle Rap MC and Creative Artist from STL</h1>
+    <!--Mobile Heading-->
+    <h1 class="font-semibold lg:pl-5 lg:hidden text-center">Follow Jayrone</h1>
+    <div class="px-5 lg:pr-10 flex flex-row items-center gap-5 lg:gap-6">
+      <%= render "shared/social"%>
+    </div>
+  </header>
+  <nav class="sticky top-0 w-full bg-neutral-900 text-neutral-400 z-50">
     <div class="flex flex-row items-center justify-between">
-      <%= link_to root_path do %>
+      <%= link_to root_path, data: { turbo: false } do %>
         <%= image_tag "logo.png", class: "h-20 pl-5 py-3 lg:hidden" %>
         <%= image_tag "logolong.png", class: "h-20 pl-5 py-3 hidden lg:block" %>
       <% end %>
@@ -13,7 +23,7 @@
       <!--desktop links-->
       <div class="lg:block hidden ">
         <div class="flex flex-row gap-3 xl:gap-7 mx-5 text-center">
-          <%=link_to "Home", root_path, class: "hover:text-neutral-700"%>
+          <%=link_to "Home", root_path, data: { turbo: false },  class: "hover:text-neutral-700"%>
           <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-700"%>
           <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-700"%>
           <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-700"%>
@@ -37,4 +47,6 @@
       </div>
     </div>
   </nav>
+<!--
 </div>
+-->  
