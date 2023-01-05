@@ -64,14 +64,14 @@
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90" >
               <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
-                <%=link_to "Music Videos", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Battle Rap", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
                 <%=link_to "Interviews", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Artists to Watch", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Artists to Watch", artists_to_watch_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
           </div>
-          <%=link_to "Merchandise", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "Merchandise", merchandise_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <!--Button-->
           <%=link_to "Connect", contact_path, class: "font-sans bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-110 text-neutral-800 px-4 rounded-lg py-2"%>
 

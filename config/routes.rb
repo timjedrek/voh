@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   # VIDEO ROUTES
   get 'music-videos', to: 'videos#music_videos'
   get 'battle-rap', to: 'videos#battle_rap'
-  get 'artists-to-watch', to: 'videos#artists_to_watch', as: 'artists'
+  get 'artists-to-watch', to: 'videos#artists_to_watch'
   
   # MESSAGE ROUTES
   get 'contact', to: 'messages#new'
