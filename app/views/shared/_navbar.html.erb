@@ -35,6 +35,7 @@
           <%=link_to "The Hustle", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <!--Audio hover over dropdown-->
+          <%# need to get scale-110 to work when moused over.  the @mouseover in this div messes with the tailwind hover: listener thingy%>
           <div class="" @mouseover="audio_drop = true" >
             <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
