@@ -29,28 +29,47 @@
       <div class="lg:block hidden font-navfont uppercase">
         <!--create open variable in Alpine-->
         <div class="flex flex-row gap-2 xl:gap-7 mx-5 text-center items-center text-lg font-bold"
-        x-data="{ audio_drop: false }" 
-         @mouseleave="audio_drop = false" >
+        x-data="{ audio_drop: false, video_drop: false }" 
+         @mouseleave="audio_drop = false, video_drop = false" >
           <%=link_to "Home", root_path, data: { turbo: false },  class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <%=link_to "The Hustle", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <!--Audio hover over dropdown-->
           <div class="" @mouseover="audio_drop = true" >
             <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
-            <div class=" bg-neutral-900 dropshadow-xl w-40 absolute z-50 mt-6" x-show="audio_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 mr-20" x-show="audio_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
                 x-transition:leave="transition ease-in duration-300"
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90" >
-              <div class="flex flex-col  mx-5 text-center items-center text-lg font-bold">
+              <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
                 <%=link_to "Music", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
                 <%=link_to "Pod Cast", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
           </div>
-          <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <!--Video hover over dropdown-->
+          <div class="" @mouseover="video_drop = true">
+            <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+            <!--Hover Menu Video-->
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 mr-20" x-show="video_drop"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 transform scale-90"
+                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 transform scale-100"
+                x-transition:leave-end="opacity-0 transform scale-90" >
+              <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
+                <%=link_to "Music Videos", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Battle Rap", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Interviews", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Artists to Watch", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+              </div>
+            </div>
+          </div>
           <%=link_to "Merchandise", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <!--Button-->
           <%=link_to "Connect", root_path, class: "font-sans bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-110 text-neutral-800 px-4 rounded-lg py-2"%>
