@@ -50,13 +50,12 @@
     <div class="lg:hidden">
       <div class="flex flex-col h-screen text-center justify-center -mt-10" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
         <div class="flex flex-col justify-center gap-5 text-xl ">
-          <%=link_to "Home", root_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Artists to Watch", artists_to_watch_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Game Corner", game_corner_path, class: "hover:text-neutral-700"%>
-          <%=link_to "Merchandise", merchandise_path, class: "hover:text-neutral-700"%>
+         <%=link_to "Home", root_path, data: { turbo: false },  class: ""%>
+          <%=link_to "The Hustle", root_path, class: ""%>
+          <%=link_to "Tour Dates", tours_path, class: ""%>
+          <%=link_to "Audio", root_path, class: ""%>
+          <%=link_to "Visual", root_path, class: ""%>
+          <%=link_to "Merchandise", root_path, class: ""%>
         </div>
         <div class="px-5 w-full flex flex-row items-center justify-center gap-5 mt-20">
           <%= render "shared/social"%>
