@@ -32,14 +32,14 @@
         x-data="{ audio_drop: false, video_drop: false }" 
          @mouseleave="audio_drop = false, video_drop = false" >
           <%=link_to "Home", root_path, data: { turbo: false },  class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-          <%=link_to "The Hustle", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+          <%=link_to "The Hustle", about_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <%=link_to "Tour Dates", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
           <!--Audio hover over dropdown-->
           <%# need to get scale-110 to work when moused over.  the @mouseover in this div messes with the tailwind hover: listener thingy%>
           <div class="" @mouseover="audio_drop = true" >
             <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
-            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 right-[22rem]" x-show="audio_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 right-[22rem]" x-cloak x-show="audio_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
@@ -56,7 +56,7 @@
           <div class="" @mouseover="video_drop = true">
             <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
             <!--Hover Menu Video-->
-            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 right-[14rem]" x-show="video_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 right-[14rem]" x-cloak x-show="video_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
@@ -88,11 +88,12 @@
       <div class="flex flex-col h-screen text-center justify-center -mt-10" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
         <div class="flex flex-col justify-center gap-5 text-xl ">
          <%=link_to "Home", root_path, data: { turbo: false },  class: ""%>
-          <%=link_to "The Hustle", root_path, class: ""%>
+          <%=link_to "The Hustle", about_path, class: ""%>
           <%=link_to "Tour Dates", tours_path, class: ""%>
           <%=link_to "Audio", root_path, class: ""%>
           <%=link_to "Visual", root_path, class: ""%>
           <%=link_to "Merchandise", root_path, class: ""%>
+          <%=link_to "Connect", contact_path, class: ""%>
         </div>
         <div class="px-5 w-full flex flex-row items-center justify-center gap-5 mt-20">
           <%= render "shared/social"%>

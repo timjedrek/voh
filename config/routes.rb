@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'contact/confirmation', to: 'messages#confirmation'
 
   # PAGE ROUTES
+  get 'about', to: 'pages#about' 
   get 'game-corner', to: 'pages#game_corner' 
   get 'merchandise', to: 'pages#merchandise' 
 

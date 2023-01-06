@@ -5,6 +5,9 @@ class PagesController < ApplicationController
 
   def game_corner
   end
+
+  def about
+  end
   
   def merchandise
   end
