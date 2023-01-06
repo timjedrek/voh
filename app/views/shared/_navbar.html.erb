@@ -39,7 +39,7 @@
           <div class="" @mouseover="audio_drop = true" >
             <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
-            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 mr-20" x-show="audio_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 right-[22rem]" x-show="audio_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
@@ -56,7 +56,7 @@
           <div class="" @mouseover="video_drop = true">
             <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
             <!--Hover Menu Video-->
-            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 mr-20" x-show="video_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 right-[14rem]" x-show="video_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
