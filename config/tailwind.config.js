@@ -13,6 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         splash: ['"Splash"', 'Helvetica', 'Arial', 'sans-serif'],
         navfont: ['"Quicksand"', 'Inter var', ...defaultTheme.fontFamily.sans],
+        headerfont: ['"Grape Nuts"', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage : {
         'gamecorner' : "url('jayrone-game-header.png')",
