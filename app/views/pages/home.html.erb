@@ -1,34 +1,27 @@
 <%= render "shared/navbar" %>
 
 <main class="bg-black text-neutral-400">
-  <!--Video Header
-  <header class="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-r from-neutral-900 to-black">
-    <div class="relative z-30 p-5 text-2xl text-white flex flex-col items-center">
-      <p class="pb-5">The official website of</p> 
-      <%= image_tag "logo.png", class: "h-32 lg:h-64 object-cover"%>
-    </div>
-    
-    <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-      <source
-        src="https://voh-bucket.s3.us-east-2.amazonaws.com/jayrone-header.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-  </header>-->
 
   <!--Header Section, row desktop col mobile-->
-  <header class="flex flex-col lg:flex-row">
+  <header class="flex flex-col-reverse lg:flex-row">
     
-    <div class="lg:w-1/2 flex flex-col items-center text-2xl">
-      <p>I am Jayrone and I am the...</p>
+    <div class="lg:w-1/2 flex flex-col text-center items-center justify-center text-2xl py-10">
+      <p class="pb-5">I am <span class="italic font-bold">Jayrone</span> and I am the...</p>
       <%= image_tag "logo.png", class: "h-24"%>
-      <p>👑 Battle Rap King 👑</p>
-      <p>🎨 Content Creator 🖌️</p>
+      <p class="pt-5">👑 Battle Rap <b>King</b> 👑</p>
+      <p class="pb-5">🎨 <u><i><b>Content</b></i></u> Creator 🖌️</p>
+      <div class="flex flex-col lg:flex-row gap-3">
+        <%=link_to "Discover the Hustle", contact_path, class: "font-sans font-bold border-2 border-neutral-200 text-neutral-50 transition-all duration-200 hover:scale-105 text-neutral-800 px-4 rounded-lg py-2"%>
+        <%=link_to "Schedule a Show", contact_path, class: "font-sans font-bold bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-105 text-neutral-800 px-4 rounded-lg py-2"%>
+      </div>
     </div>
     
-    <div class="">
-      This is the video
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <video class="h-screen-2/3" controls loop>
+        <source src="https://voh-bucket.s3.us-east-2.amazonaws.com/introvid.mp4#t=0.15" type="video/mp4">
+        <!--<source src="movie.ogg" type="video/ogg">-->
+        Your browser does not support the video tag.
+      </video>
     </div>
   </header>
 
