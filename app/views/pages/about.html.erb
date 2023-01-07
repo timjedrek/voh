@@ -1,7 +1,15 @@
 <%= render "shared/navbar" %>
 
 <main class="bg-black text-neutral-400">
-  
+  <header>
+    <!--Text-->
+    <div class="lg:h-screen-2/3 w-full flex flex-col text-center items-center justify-center text-2xl py-10 bg-gradient-to-l from-neutral-800 to-black">
+      <p class="pb-5 text-4xl">What is the <span class="italic font-bold">hustle...?</span> </p>
+      <p class="pb-5 italic">You can't spell hustle without STL</p>
+      <%=link_to "Contact Me", contact_path, class: "font-sans font-bold bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-105 text-neutral-800 px-4 rounded-lg py-2"%>
+      </div>
+    </div>
+  </header>
   <!--CTA link to contact us-->
   <%= render "shared/cta"%>
 </main>
