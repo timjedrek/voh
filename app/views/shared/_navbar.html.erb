@@ -1,5 +1,5 @@
 <!--x-data and leave div open for sticky-->
-<div class="" x-data="{ open: false }">
+<div class="" x-data="{ open: false, audio_mobiledrop: false, video_mobiledrop: false }">
   <header class="sticky top-0 lg:hidden bg-neutral-300 text-gray-800 py-2">
     <%= link_to contact_path do%>
       <!--Mobile Heading-->
@@ -86,12 +86,47 @@
     <!--mobile menu-->
     <div class="lg:hidden">
       <div class="flex flex-col h-screen text-center justify-center -mt-10" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
-        <div class="flex flex-col justify-center gap-5 text-xl font-navfont uppercase font-semibold">
+        <div class="flex flex-col pl-28 items-start justify-center gap-5 text-xl font-navfont uppercase font-semibold">
          <%=link_to "Home", root_path, data: { turbo: false },  class: ""%>
           <%=link_to "The Hustle", about_path, class: ""%>
           <%=link_to "Tour Dates", tours_path, class: ""%>
-          <%=link_to "Audio", root_path, class: ""%>
-          <%=link_to "Visual", root_path, class: ""%>
+          <!--Audio-->
+          <div class="flex flex-row justify-between w-full" x-on:click="audio_mobiledrop = ! audio_mobiledrop" >
+            <%=link_to "Audio", root_path, class: ""%>
+            <div class="mr-12 font-bold text-2xl scale-150" x-cloak x-show="!audio_mobiledrop"
+                >
+            +
+            </div>
+            <div class="mr-12 font-bold text-2xl rotate-45 scale-150" x-cloak x-show="audio_mobiledrop"
+            >
+            +
+            </div>
+          </div>
+          <!--Audio Dropdown-->
+          <div class="flex flex-col items-start gap-5" x-show="audio_mobiledrop" x-transition x-transition:enter.duration.600ms>
+            <%=link_to "Music", "https://soundcloud.com/jayrone314", class: ""%>
+            <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", class: ""%>  
+          </div>
+          
+          <!--Video-->
+          <div class="flex flex-row justify-between w-full" x-on:click="video_mobiledrop = ! video_mobiledrop" >
+            <%=link_to "Visual", videos_path, class: ""%>
+            <div class="mr-12 font-bold text-2xl scale-150" x-cloak x-show="!video_mobiledrop"
+                >
+            +
+            </div>
+            <div class="mr-12 font-bold text-2xl rotate-45 scale-150" x-cloak x-show="video_mobiledrop"
+            >
+            +
+            </div>
+          </div>
+          <!--video Dropdown-->
+          <div class="flex flex-col items-start gap-5" x-show="video_mobiledrop" x-transition x-transition:enter.duration.600ms>
+            <%=link_to "Music Videos", music_videos_path, class: "" %>
+            <%=link_to "Battle Rap", battle_rap_path, class: "" %>
+            <%=link_to "Interviews", interviews_path, class: "" %>
+            <%=link_to "Artists to Watch", artists_to_watch_path, class: "" %>
+          </div>
           <%=link_to "Merchandise", root_path, class: ""%>
           <%=link_to "Connect", contact_path, class: ""%>
         </div>
