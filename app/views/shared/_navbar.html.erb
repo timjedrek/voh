@@ -47,14 +47,14 @@
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90" >
               <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
-                <%=link_to "Music", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Podcast", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Music", "https://soundcloud.com/jayrone314", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
           </div>
           <!--Video hover over dropdown-->
           <div class="" @mouseover="video_drop = true">
-            <%=link_to "Visual", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+            <%=link_to "Visual", videos_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
             <!--Hover Menu Video-->
             <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-56 absolute z-50 pb-5 pt-5 mt-6 right-[14rem]" x-cloak x-show="video_drop"
                 x-transition:enter="transition ease-out duration-300"
@@ -66,7 +66,7 @@
               <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
                 <%=link_to "Music Videos", music_videos_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
                 <%=link_to "Battle Rap", battle_rap_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Interviews", tours_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Interviews", interviews_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
                 <%=link_to "Artists to Watch", artists_to_watch_path, class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
@@ -86,7 +86,7 @@
     <!--mobile menu-->
     <div class="lg:hidden">
       <div class="flex flex-col h-screen text-center justify-center -mt-10" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms>
-        <div class="flex flex-col justify-center gap-5 text-xl ">
+        <div class="flex flex-col justify-center gap-5 text-xl font-navfont uppercase font-semibold">
          <%=link_to "Home", root_path, data: { turbo: false },  class: ""%>
           <%=link_to "The Hustle", about_path, class: ""%>
           <%=link_to "Tour Dates", tours_path, class: ""%>
