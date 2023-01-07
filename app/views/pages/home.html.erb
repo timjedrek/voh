@@ -1,13 +1,11 @@
 <%= render "shared/navbar" %>
 
 <main class="bg-black text-neutral-400">
-
-  <!--Header Section, row desktop col mobile-->
-  <header class="flex flex-col-reverse lg:flex-row">
-    
-    <div class="lg:w-1/2 flex flex-col text-center items-center justify-center text-2xl py-10">
+  <header>
+    <!--Text-->
+    <div class="lg:h-screen-2/3 w-full flex flex-col text-center items-center justify-center text-2xl py-10 bg-gradient-to-l from-neutral-800 to-black">
       <p class="pb-5">I am <span class="italic font-bold">Jayrone</span> and I am the...</p>
-      <%= image_tag "logo.png", class: "h-24"%>
+      <%= image_tag "logo.png", class: "h-32"%>
       <p class="pt-5">👑 Battle Rap <b>King</b> 👑</p>
       <p class="pb-5">🎨 <u><i><b>Content</b></i></u> Creator 🖌️</p>
       <div class="flex flex-col lg:flex-row gap-3">
@@ -15,45 +13,10 @@
         <%=link_to "Schedule a Show", contact_path, class: "font-sans font-bold bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-105 text-neutral-800 px-4 rounded-lg py-2"%>
       </div>
     </div>
-    
-    <div class="lg:w-1/2 flex flex-col items-center">
-      <video class="h-screen-2/3" controls loop>
-        <source src="https://voh-bucket.s3.us-east-2.amazonaws.com/introvid.mp4#t=0.54" type="video/mp4">
-        <!--<source src="movie.ogg" type="video/ogg">-->
-        Your browser does not support the video tag.
-      </video>
-    </div>
   </header>
-
-  <!--1st section-->
-  <section class="flex flex-col-reverse lg:flex-row items-center justify-center">
-    <!--Text-->
-    <div class="px-5 lg:px-32 lg:w-1/2">
-      <p>I am Jayrone and I am...</p>
-      <p class="text-4xl font-bold py-5 text-center">The Voice of a Hustler</p>
-      <p class="">Born and raised in the STL - the three one four, I've been perfecting my craft over the past decade. We out here doing numbers. WATCH, COMMENT, and SUPPORT! </p>
-      <!--Stats-->
-      <div class="">
-        <ul class="py-5 pl-3 lg:pl-20 overflow-hidden lg:overflow-visible">
-          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">♬</div>The Battle Rap King</div></li>
-          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">♬</div>1,000,000+ total views on YouTube</div></li>
-          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">♬</div>1,000,000+ total streams on Spotify, iTunes, and SoundCloud</div></li>
-          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">♬</div>Touring cross country all over America</div></li>
-        </ul>
-      </div>
-    </div>
-    <!--image-->
-    <div class="lg:w-1/2">
-      <%= image_tag "jayrone1.jpg", class: "object-cover p-5"%>
-    </div>
-  </section>
-
-  <!--2nd section-->
-  <section class="flex flex-col lg:flex-row items-center justify-center">
-    <!--image-->
-    <div class="lg:w-1/2">
-      <%= image_tag "jayrone2.jpg", class: "object-cover p-5 rounded-4xl"%>
-    </div>
+  <!--Header Section-->
+  <section class="flex flex-col lg:flex-row items-center ">
+  
     <!--Text-->
     <div class="px-5 lg:px-32 lg:w-1/2 overflow-hidden lg:overflow-visible">
       <p class="">Life is a</p>
@@ -61,50 +24,74 @@
       <p class="text-right">Her stripper name is</p>
       <p class="text-right text-4xl italic py-10 opacity-0 duration-[2500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')">karma</p>
     </div>
+
+    <!--Video Section-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:py-10">
+      <video class="h-screen-2/3" controls loop>
+        <source src="https://voh-bucket.s3.us-east-2.amazonaws.com/introvid.mp4#t=0.54" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </section>
 
-  <!--3rd Section Featured Video-->
-  <section>
-    <h1 class="font-bold text-4xl text-center lg:mt-20 ">Featured Video</h1>
 
-    <div class="flex flex-col items-center">
-      <%= link_to @video, class: "hover:brightness-150 lg:w-4/5" do %>
-        <%= image_tag "https://img.youtube.com/vi/#{@video.code}/0.jpg", class: "w-full" %>
-        <div class="font-semibold text-2xl text-center bg-black pb-3 lg:-mt-20">
-          <%=@video.title%>
-        </div>
-
-      <% end %>
+  <!--3rd section-->
+  <section class="flex flex-col-reverse lg:flex-row-reverse items-center justify-center lg:bg-gradient-to-l from-neutral-800 to-black ">
+    <!--Text-->
+    <div class="px-5 lg:px-32 lg:w-1/2">
+      <h2 class="text-4xl font-bold py-5 text-center">Battle Rap</h2>
+      <!--Animation-->
+      <div class="">
+        <ul class="py-5 pl-3 lg:pl-20 overflow-hidden lg:overflow-visible">
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3"></div>I am the frontline soldier for Street Status TV</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3"></div>I represent the STL battle rap culture</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3"></div>You think you can defeat me?</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3"></div>Fly me to your hometown</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3"></div>I'll embarass you in front of all your homies</div></li>
+        </ul>
+      </div>
+      <div class="opacity-0 duration-[1500ms] translate-y-24 text-center w-full flex flex-col items-center" x-intersect="$el.classList.add('opacity-100', 'translate-y-1', 'z-0')">
+        <%=link_to contact_path do%>
+          <div class="text-center font-bold w-24 bg-neutral-200 hover:bg-neutral-50 transition-all duration-200 hover:scale-110 text-neutral-800 px-4 rounded-lg py-2">
+            FWM
+          </div>
+        <% end %>
+      </div>
     </div>
+    <!--image-->
+    <div class="lg:w-1/2">
+      <%= image_tag "jayrone1.jpg", class: "object-cover px-5"%>
+    </div>
+  </section>
 
+  <!--2nd section-->
+  <section class="flex flex-col lg:flex-row-reverse items-center justify-center">
+    <!--image-->
+    <div class="lg:w-1/2">
+      <h2 class="font-bold text-4xl text-center lg:mt-20 ">Featured Video</h2>
+
+      <div class="flex flex-col items-center">
+        <%= link_to @video, class: "hover:brightness-150 lg:w-4/5" do %>
+          <%= image_tag "https://img.youtube.com/vi/#{@video.code}/0.jpg", class: "w-full" %>
+          <div class="font-semibold text-2xl text-center bg-black pb-3 ">
+            <%=@video.title%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!--Text-->
+    <div class="px-5 lg:px-32 lg:w-1/2 overflow-hidden">
+      <h3 class="font-semibold ">I am a <span class="font-">creative</span> artist</h3>
+      <p class="">Life is a</p>
+      <p class="">Life is a</p>
+      <p class="">Life is a</p>
+      <p class="">Life is a</p>
+    </div>
   </section>
 
 
   <!--4th section - CTA link to contact us-->
-  <section class="py-10 px-5 flex flex-col items-center text-neutral-200">
-    <!--Main box-->
-    <div class="w-full lg:w-4/5 duration-[8000ms] scale-95" x-intersect="$el.classList.add('scale-100', 'z-0')" >
-      <div class="bg-neutral-700 drop-shadow-2xl rounded-2xl flex flex-col lg:flex-row-reverse lg:justify-between">
-        <!--Image stuff-->
-        <%= image_tag "crowd.jpg", class: "w-full rounded-t-2xl saturate-200 lg:w-2/5 lg:rounded-r-2xl lg:rounded-l-none" %>
-        <!--Text Stuff-->
-        <div class="lg:pl-10 px-3 pt-7 pb-3 flex flex-col justify-center">
-          <h3 class="font-semibold ">Contact the Voice of the Hustler</h3>
-          <h2 class="font-bold text-3xl ">For Media Inquiries and Bookings</h2>
-          <p class="">
-          Get in my DMs.  Follow the link below and fill out the form to get in contact.  
-          </p>
-          <%= link_to new_message_path do %>
-            <div class="flex flex-row justify-center p-3 lg:justify-start lg:mt-8">
-              <div class="text-center p-3 px-6 bg-neutral-200 rounded-lg hover:bg-neutral-400 text-black w-2/3 lg:w-1/3">
-                Holla at me!
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </section>
+  <%= render "shared/cta"%>
 </main>
 <%= render "shared/footer"%>
 <!--div from shared/navbar that was left open for sticky nav-->

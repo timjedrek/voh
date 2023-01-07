@@ -1,33 +1,9 @@
 <%= render "shared/navbar" %>
 
 <main class="bg-black text-neutral-400">
-
-
-  <!--4th section - CTA link to contact us-->
-  <section class="py-10 px-5 flex flex-col items-center text-neutral-200">
-    <!--Main box-->
-    <div class="w-full lg:w-4/5 duration-[8000ms] scale-95" x-intersect="$el.classList.add('scale-100', 'z-0')" >
-      <div class="bg-neutral-700 drop-shadow-2xl rounded-2xl flex flex-col lg:flex-row-reverse lg:justify-between">
-        <!--Image stuff-->
-        <%= image_tag "crowd.jpg", class: "w-full rounded-t-2xl saturate-200 lg:w-2/5 lg:rounded-r-2xl lg:rounded-l-none" %>
-        <!--Text Stuff-->
-        <div class="lg:pl-10 px-3 pt-7 pb-3 flex flex-col justify-center">
-          <h3 class="font-semibold ">Contact the Voice of the Hustler</h3>
-          <h2 class="font-bold text-3xl ">For Media Inquiries and Bookings</h2>
-          <p class="">
-          Get in my DMs.  Follow the link below and fill out the form to get in contact.  
-          </p>
-          <%= link_to new_message_path do %>
-            <div class="flex flex-row justify-center p-3 lg:justify-start lg:mt-8">
-              <div class="text-center p-3 px-6 bg-neutral-200 rounded-lg hover:bg-neutral-400 text-black w-2/3 lg:w-1/3">
-                Holla at me!
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <!--CTA link to contact us-->
+  <%= render "shared/cta"%>
 </main>
 <%= render "shared/footer"%>
 <!--div from shared/navbar that was left open for sticky nav-->
