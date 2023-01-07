@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage : {
         'gamecorner' : "url('jayrone-game-header.png')",
+        'gc-cta' : "url('futuregrid.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
