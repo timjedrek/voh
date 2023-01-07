@@ -10,6 +10,24 @@
       </div>
     </div>
   </header>
+  <section class="flex flex-col-reverse lg:flex-row-reverse items-center justify-center pt-5 lg:pt-0 text-neutral-100">
+     <!--image-->
+    <div class="lg:w-1/2">
+
+      <div class="flex flex-col items-center">
+        <%= image_tag "jayrone2.jpg" , class: ""%>
+      </div>
+    </div>
+    <!--Text-->
+    <div class="px-5 lg:px-32 lg:w-1/2 flex flex-col items-center gap-3 text-center pb-10">
+      <h3 class="font-semibold text-3xl">My <span class="font-headerfont text-5xl hover:text-red-700">story</span></h3>
+      <p class="text-lg text-left">I'm a MC discovered through the art of battle rap.  My wordplay and syllable rhythm is why I stand out amongst the masses.  My content shows my endless creativity of the art.</p>
+      <p class="text-lg text-left">I run a podcast radio station. I have a gaming station with over 1,000 followers who game and chat. I have a clothing brand and shoe line that is launching 2024. I have so much music that I literally create a new ep every month or every other month. Due to the fact I bring in over 10,000 streams a month.</p>
+      <p class="text-2xl font-semibold hover:text-green-700">We get up to get that <span class="font-bold">dollar</span></p>
+      <p class="text-4xl">I <span class="italic hover:text-blue-700">articulate</span> the <span class="hover:text-green-700">hustle</span></p>
+      <%=link_to "Discover the Hustle", contact_path, class: "font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-4 rounded-lg py-2"%>
+    </div>
+  </section>
 
   <%= render "shared/gc-cta"%>
   <!--CTA link to contact us-->
