@@ -19,6 +19,9 @@
         To Be Added To "Artist To Watch" Email <%= mail_to 'jayrone@voiceofahustler.com', class: "text-blue-400 hover:underline"%> - Pricing Starts @ $299.99
       </div>
     <% end %>
+    <% if current_page?(interviews_path) %>
+      <h1 class="text-6xl">Interviews</h1>
+    <% end %>
   </div>
 
    <div class="flex flex-col lg:grid lg:grid-cols-4 gap-3 lg:mx-10">

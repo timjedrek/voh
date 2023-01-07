@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:music_videos, :battle_rap, :artists_to_watch, :show]
+  before_action :authenticate_admin!, except: [:music_videos, :battle_rap, :artists_to_watch, :show, :interviews]
 
   def music_videos
     @videos = Video.music_videos
@@ -12,6 +12,10 @@ class VideosController < ApplicationController
   
   def artists_to_watch
     @videos = Video.artists_to_watch
+  end
+
+  def interviews
+    @videos = Video.interviews
   end
 
   # GET /videos or /videos.json
