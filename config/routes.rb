@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about' 
   get 'game-corner', to: 'pages#game_corner' 
   get 'merchandise', to: 'pages#merchandise' 
+  get 'audio', to: 'pages#audio' 
 
   root "pages#home"
 end

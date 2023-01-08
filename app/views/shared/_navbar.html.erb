@@ -37,7 +37,7 @@
           <!--Audio hover over dropdown-->
           <%# need to get scale-110 to work when moused over.  the @mouseover in this div messes with the tailwind hover: listener thingy%>
           <div class="" @mouseover="audio_drop = true" >
-            <%=link_to "Audio", root_path, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
+            <%=link_to "Audio", audio_path, data: { turbo: false }, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
             <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 right-[22rem]" x-cloak x-show="audio_drop"
                 x-transition:enter="transition ease-out duration-300"
@@ -92,7 +92,7 @@
           <%=link_to "Tour Dates", tours_path, class: ""%>
           <!--Audio-->
           <div class="flex flex-row justify-between w-full" x-on:click="audio_mobiledrop = ! audio_mobiledrop" >
-            <%=link_to "Audio", root_path, class: ""%>
+            <%=link_to "Audio", audio_path, data: { turbo: false }, class: ""%>
             <div class="mr-12 font-bold text-2xl scale-150" x-cloak x-show="!audio_mobiledrop"
                 >
             +

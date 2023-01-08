@@ -11,4 +11,7 @@ class PagesController < ApplicationController
   
   def merchandise
   end
+
+  def audio
+  end
 end
