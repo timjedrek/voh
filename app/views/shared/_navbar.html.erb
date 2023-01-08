@@ -47,8 +47,8 @@
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90" >
               <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
-                <%=link_to "Music", "https://soundcloud.com/jayrone314", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Music", "https://soundcloud.com/jayrone314", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
           </div>
@@ -104,8 +104,8 @@
           </div>
           <!--Audio Dropdown-->
           <div class="flex flex-col items-start gap-5" x-show="audio_mobiledrop" x-transition x-transition:enter.duration.600ms>
-            <%=link_to "Music", "https://soundcloud.com/jayrone314", class: ""%>
-            <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", class: ""%>  
+            <%=link_to "Music", "https://soundcloud.com/jayrone314", target: "blank", class: ""%>
+            <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: ""%>  
           </div>
           
           <!--Video-->
