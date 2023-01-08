@@ -16,7 +16,8 @@ module.exports = {
         headerfont: ['"Grape Nuts"', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage : {
-        'gamecorner' : "url('jayrone-game-header.png')",
+        'gamecorner' : "url('gchead.webp')",
+        'gamecorner2' : "url('jayrone-game-header.png')",
         'gc-cta' : "url('futuregrid.webp')",
       },
       height: theme => ({
