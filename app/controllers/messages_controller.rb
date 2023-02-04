@@ -29,7 +29,8 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save && verify_recaptcha(model: @message)
-        MessageMailer.new_message(@message).deliver
+        
+        #MessageMailer.new_message(@message).deliver
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
       else
@@ -45,7 +46,8 @@ class MessagesController < ApplicationController
       if @message.update(message_params)
         #format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
         #format.json { render :show, status: :ok, location: @message }
-        MessageMailer.new_message(@message).deliver
+        
+        #MessageMailer.new_message(@message).deliver
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
       else
