@@ -39,7 +39,7 @@
           <div class="" @mouseover="audio_drop = true" >
             <%=link_to "Audio", audio_path, data: { turbo: false }, class: "hover:text-neutral-200 hover:scale-110 link-underline" %>
             <!--Hover Menu Audio-->
-            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-44 absolute z-50 pb-5 pt-5 mt-6 right-[22rem]" x-cloak x-show="audio_drop"
+            <div class=" bg-neutral-900 dropshadow-xl rounded-b-xl w-52 absolute z-50 pb-5 pt-5 mt-6 right-[20rem]" x-cloak x-show="audio_drop"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
@@ -47,8 +47,9 @@
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90" >
               <div class="flex flex-col gap-3 mx-5 text-center items-center text-lg font-bold">
-                <%=link_to "Music", "https://soundcloud.com/jayrone314", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
-                <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "SoundCloud", "https://soundcloud.com/jayrone314", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Apple Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
+                <%=link_to "Spotify Podcast", "https://open.spotify.com/show/1ggCTyMaXPskY7vqo2ggQP?si=txZXcmsQTKyCj4HhJbq4SQ&fbclid=IwAR2U84LVuYx5v7LDytDhaZTa_Cklc_dRo8HyXrxNyhDkPWG9OERqkNSahlE&nd=1&dlsi=32a1b4671c9c4b78", target: "blank", class: "hover:text-neutral-200 hover:scale-110 link-underline"%>
               </div>
             </div>
           </div>
@@ -105,8 +106,9 @@
           </div>
           <!--Audio Dropdown-->
           <div class="flex flex-col items-start gap-5" x-show="audio_mobiledrop" x-transition x-transition:enter.duration.600ms>
-            <%=link_to "Music", "https://soundcloud.com/jayrone314", target: "blank", class: ""%>
-            <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: ""%>  
+            <%=link_to "SoundCloud", "https://soundcloud.com/jayrone314", target: "blank", class: ""%>
+            <%=link_to "Apple PodCast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: ""%>  
+            <%=link_to "Spotify PodCast", "https://open.spotify.com/show/1ggCTyMaXPskY7vqo2ggQP?si=txZXcmsQTKyCj4HhJbq4SQ&fbclid=IwAR2U84LVuYx5v7LDytDhaZTa_Cklc_dRo8HyXrxNyhDkPWG9OERqkNSahlE&nd=1&dlsi=32a1b4671c9c4b78", target: "blank", class: ""%>  
           </div>
           
           <!--Video-->
