@@ -15,12 +15,27 @@
       <div class="lg:w-1/2 flex flex-col items-center">
         <h2 class="text-3xl font-bold">Music</h2>
         <p class="py-5">Visit my SoundCloud page to hear all of my music.</p> 
-        <%=link_to "SoundCloud", "https://soundcloud.com/jayrone314", target: "blank", class: "w-32 text-center font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-4 rounded-lg py-2"%>
+        <%=link_to "https://soundcloud.com/jayrone314", target: "blank", class: "" do%>
+          <div class=" text-center font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-4 rounded-lg py-2">
+            <%= image_tag "soundcloud-icon.svg", alt: "soundcloud icon", class: "w-52" %>
+          </div>
+        <% end %>
       </div>
       <div class="lg:w-1/2 flex flex-col items-center pb-5">
         <h2 class="text-3xl font-bold pt-5 lg:pt-0">Podcast</h2>
         <p class="py-5">Listen to the Voice of a Hustler Podcast.</p>
-        <%=link_to "Podcast", "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: "w-32 text-center font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-4 rounded-lg py-2"%>
+        <%=link_to  "https://podcasts.apple.com/us/podcast/voice-of-a-hustler-podcast/id1443320743?fbclid=IwAR2zoJSXQGRHovF9gwzJLqn3HQRv53gx84FJ22-bElGjEJPJgmHrrtmFHdc", target: "blank", class: "" do%>
+          <div class="flex items-center text-center font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-5 rounded-lg py-2">
+            <%= image_tag "apple-podcast-icon.svg", alt: "apple podcast icon", class: "w-8" %>
+            <div class="ml-3">Apple Podcast</div>
+          </div>
+        <% end %>
+        <%=link_to  "https://l.facebook.com/l.php?u=https%3A%2F%2Fopen.spotify.com%2Fshow%2F1ggCTyMaXPskY7vqo2ggQP%3Fsi%3DtxZXcmsQTKyCj4HhJbq4SQ%26fbclid%3DIwAR2ieXLgOFOO9UXqvgwYwnUtRlTniakuuRtKCCbqxWkCsrnGVl6JZaeE1LE&h=AT0OnLL9rV4DBIIOZVSFTDUdDUgxQXzDJDzwPDZGUn07RXYiBEQ8BiYZFLtVRUIrlWI2Sf4YcMETSk12bNxWau_5U_Z2FxO1vwMTJOJYtZ6xzt6t5YCokMNKpFc0_YlKox314hWrc", target: "blank", class: "pt-5" do%>
+          <div class="flex items-center text-center font-sans font-bold border-2 border-neutral-200 text-neutral-100 transition-all duration-200 hover:scale-105 px-4 rounded-lg py-2">
+            <%= image_tag "spotify-icon.svg", alt: "spotify podcast icon", class: "w-8" %>
+            <div class="ml-3">Spotify Podcast</div>
+          </div>
+        <% end %>
       </div>
     </section>
   <%= render "shared/gc-cta"%>
